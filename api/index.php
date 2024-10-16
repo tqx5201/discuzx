@@ -139,7 +139,7 @@ if(!empty($url)) {
 	}
 } else {
 	if(preg_match("/^[\w-]+$/i", $_ENV['curapp'])) {
-		require './'.$_ENV['curapp'].'.php';
+		echo $_ENV['curapp'];exit;require './'.$_ENV['curapp'].'.php';
 	} else {
 		header('location: ./'.$_ENV['curapp'].'.php');
 	}
